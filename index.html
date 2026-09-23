@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oxford Exxon DBA YAM Investment LLC — retail and convenience store in Oxford, Mississippi.">
+  <title>Oxford Exxon | YAM Investment LLC</title>
+  <style>
+    :root{
+      --blue:#0b4ea2;
+      --deep-blue:#073b7a;
+      --red:#ed1c24;
+      --light:#f5f8fc;
+      --text:#182334;
+      --muted:#5e6b7a;
+      --white:#fff;
+      --shadow:0 12px 35px rgba(7,59,122,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .topbar{
+      background:var(--deep-blue);
+      color:#fff;
+      text-align:center;
+      padding:9px 20px;
+      font-size:14px;
+    }
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow:0 2px 14px rgba(0,0,0,.08);
+    }
+    .nav{
+      max-width:1120px;
+      margin:auto;
+      min-height:78px;
+      padding:10px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+    .brand img{height:58px;width:auto;display:block}
+    .navlinks{display:flex;gap:25px;align-items:center;font-weight:700;color:var(--deep-blue)}
+    .navlinks a:hover{color:var(--red)}
+    .phone{
+      background:var(--red);
+      color:#fff;
+      padding:11px 17px;
+      border-radius:8px;
+      font-weight:700;
+    }
+    .hero{
+      background:linear-gradient(135deg,#073b7a 0%,#0b4ea2 55%,#0c65bf 100%);
+      color:#fff;
+      padding:82px 24px 90px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:430px;height:430px;
+      border:70px solid rgba(255,255,255,.07);
+      border-radius:50%;
+      right:-170px;top:-180px;
+    }
+    .hero-inner{
+      max-width:1120px;margin:auto;display:grid;
+      grid-template-columns:1.25fr .75fr;gap:50px;align-items:center;
+      position:relative;z-index:1;
+    }
+    .eyebrow{
+      color:#ffd21c;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:14px;
+      font-weight:800;
+    }
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:12px 0 20px}
+    .hero p{font-size:20px;max-width:650px;color:#eaf3ff}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{
+      display:inline-block;padding:13px 21px;border-radius:8px;font-weight:800;
+      border:2px solid transparent;
+    }
+    .btn-red{background:var(--red);color:#fff}
+    .btn-white{background:#fff;color:var(--deep-blue)}
+    .hero-card{
+      background:#fff;padding:25px;border-radius:18px;box-shadow:var(--shadow);
+      color:var(--text);
+    }
+    .hero-card img{width:100%;max-height:250px;object-fit:contain}
+    section{padding:75px 24px}
+    .container{max-width:1120px;margin:auto}
+    .section-title{text-align:center;margin-bottom:42px}
+    .section-title .label{
+      color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:13px
+    }
+    .section-title h2{font-size:38px;margin:7px 0 10px;color:var(--deep-blue)}
+    .section-title p{color:var(--muted);max-width:680px;margin:auto}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{
+      background:#fff;border:1px solid #e5ebf2;border-radius:14px;padding:28px;
+      box-shadow:0 7px 24px rgba(12,54,95,.07)
+    }
+    .icon{
+      width:46px;height:46px;border-radius:12px;background:#eaf2ff;color:var(--blue);
+      display:grid;place-items:center;font-size:22px;font-weight:900;margin-bottom:15px
+    }
+    .card h3{margin:0 0 8px;color:var(--deep-blue)}
+    .card p{margin:0;color:var(--muted)}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-box{
+      background:#fff;border-radius:16px;padding:32px;box-shadow:var(--shadow)
+    }
+    .about-box h3{color:var(--deep-blue);font-size:25px;margin-top:0}
+    .facts{display:grid;gap:14px;margin-top:20px}
+    .fact{display:flex;gap:12px;align-items:flex-start}
+    .fact b{color:var(--deep-blue)}
+    .contact{background:var(--deep-blue);color:#fff}
+    .contact .section-title h2{color:#fff}
+    .contact .section-title p{color:#dbe9fb}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .contact-card{
+      background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);
+      border-radius:14px;padding:25px
+    }
+    .contact-card span{display:block;color:#a9c9ef;font-size:13px;text-transform:uppercase;font-weight:800;letter-spacing:1px}
+    .contact-card strong{display:block;font-size:19px;margin-top:5px}
+    footer{
+      background:#052d5e;color:#dbe9fb;text-align:center;padding:24px;
+      font-size:14px
+    }
+    @media(max-width:800px){
+      .navlinks{display:none}
+      .hero-inner,.about-grid{grid-template-columns:1fr}
+      .hero-card{max-width:520px}
+      .cards,.contact-grid{grid-template-columns:1fr}
+      section{padding:60px 20px}
+      .hero{padding:65px 20px 70px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Oxford Exxon • YAM Investment LLC • Oxford, Mississippi</div>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home" aria-label="Oxford Exxon home">
+        <img src="oxford-exxon-logo.png" alt="Oxford Exxon logo">
+      </a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="phone" href="tel:5157106439">515-710-6439</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Oxford, Mississippi</div>
+          <h1>Oxford Exxon</h1>
+          <p>Retail and convenience services from YAM Investment LLC, serving the Oxford community.</p>
+          <div class="buttons">
+            <a class="btn btn-red" href="tel:5157106439">Call Us</a>
+            <a class="btn btn-white" href="#contact">Contact Information</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="oxford-exxon-logo.png" alt="Oxford Exxon">
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <div class="label">What we offer</div>
+          <h2>Retail & Convenience</h2>
+          <p>Oxford Exxon is a local retail and convenience store operated by YAM Investment LLC.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="icon">01</div>
+            <h3>Convenience Store</h3>
+            <p>Convenient retail shopping for everyday needs.</p>
+          </div>
+          <div class="card">
+            <div class="icon">02</div>
+            <h3>Local Service</h3>
+            <p>A locally operated business serving customers in Oxford, Mississippi.</p>
+          </div>
+          <div class="card">
+            <div class="icon">03</div>
+            <h3>Customer Support</h3>
+            <p>Have a question? Contact our team directly for assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <div class="label">About the company</div>
+          <h2>Oxford Exxon</h2>
+          <p>Oxford Exxon operates under YAM Investment LLC.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-box">
+            <h3>Company Information</h3>
+            <div class="facts">
+              <div class="fact"><span>🏢</span><div><b>Legal/DBA:</b><br>Oxford Exxon DBA YAM Investment LLC</div></div>
+              <div class="fact"><span>📍</span><div><b>Address:</b><br>1724 University Ave, Oxford, MS 38655</div></div>
+              <div class="fact"><span>📞</span><div><b>Phone:</b><br><a href="tel:5157106439">515-710-6439</a></div></div>
+            </div>
+          </div>
+          <div class="about-box">
+            <h3>Our Team</h3>
+            <div class="facts">
+              <div class="fact"><span>👤</span><div><b>CEO</b><br>Rooziman Shah</div></div>
+              <div class="fact"><span>👤</span><div><b>Administrative Assistant</b><br>Bashir Ullah</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <div class="label">Get in touch</div>
+          <h2>Contact Oxford Exxon</h2>
+          <p>For questions or additional information, contact our team.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <span>Phone</span>
+            <strong><a href="tel:5157106439">515-710-6439</a></strong>
+          </div>
+          <div class="contact-card">
+            <span>Address</span>
+            <strong>1724 University Ave<br>Oxford, MS 38655</strong>
+          </div>
+          <div class="contact-card">
+            <span>Administrative Contact</span>
+            <strong>Bashir Ullah</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Oxford Exxon DBA YAM Investment LLC. All rights reserved.
+  </footer>
+</body>
+</html>
